@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'relationships'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.summary     = "Compiles a list of ActiveRecord relationships in a Rails application."
   s.description = "One simply calls relationships to generate ActiveRecord relationship output."
   s.authors     = ["Andrew Kofink"]

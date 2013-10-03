@@ -7,7 +7,14 @@ class Model
 
   def initialize(args = {})
     @file_path = args[:file]
-    @file_contents = File.read file_path if file_path
+    if File.directory? file_path
+      model_files = Dir[Pathname.new(file_path)]
+      models = model_files.map do |model_file|
+        Model.from_file model_file
+      end
+    else
+      @file_contents = File.read file_path if file_path 
+    end
   end
 
   def relationships

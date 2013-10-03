@@ -4,7 +4,7 @@ Gem.find_files('relationships/*').each {|m| require m}
 
 class Relationships
   def self.run!
-    model_files = Dir[Pathname.new('app/models/*')]
+    model_files = Dir[Pathname.new('app/models/**/*.rb')]
     models = FileParser.parse model_files
     MarkdownGenerator.output models
   end
