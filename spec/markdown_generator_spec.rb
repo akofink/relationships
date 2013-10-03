@@ -29,17 +29,24 @@ describe MarkdownGenerator do
   describe '#output!' do
     before(:each) do
       markdown_generator.stub(:file).and_return file
+      file.stub(:write)
+      file.stub(:close)
+      model.stub(:class_name)
+      model.stub(:relationships).and_return []
     end
 
     it 'should output each model relationships' do
-      model.stub(:relationships).and_return []
       model.should_receive(:class_name).exactly(2).times
       markdown_generator.output!
     end
 
     it 'should output each model relationships' do
-      model.stub(:class_name)
       model.should_receive(:relationships).exactly(2).times.and_return([])
+      markdown_generator.output!
+    end
+
+    it 'should close the file' do
+      file.should_receive(:close)
       markdown_generator.output!
     end
   end

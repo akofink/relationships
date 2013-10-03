@@ -25,6 +25,6 @@ class Model
   private
 
   def extract_relationships
-    @file_contents.scan /belongs_to|has_many|has_one/
+    @file_contents.scan /belongs_to.+$|has_many.+$|has_one.+$|has_and_belongs_to_many.+$/
   end
 end

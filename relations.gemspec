@@ -5,7 +5,12 @@ Gem::Specification.new do |s|
   s.description = "One simply calls rake relations to generate relation output."
   s.authors     = ["Andrew Kofink"]
   s.email       = 'ajkofink@gmail.com'
-  s.files       = ["lib/relations.rb"]
+  s.files       = [
+    'lib/relations.rb',
+    'lib/relations/file_parser.rb',
+    'lib/relations/markdown_generator.rb',
+    'lib/relations/model.rb'
+  ]
   s.homepage    = 'https://github.com/akofink/relations'
   s.licenses    = 'Beerware'
   s.executables << 'relations'

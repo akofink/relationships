@@ -7,8 +7,9 @@ class MarkdownGenerator
   end
 
   def initialize(args = {})
-    @relations_path = Rails.root.join 'relations'
+    @relations_path = Pathname.new('').join 'relations'
     @models = args[:models]
+    make_relations_directory
   end
 
   def file
@@ -17,16 +18,17 @@ class MarkdownGenerator
 
   def output!
     models.each do |model|
-      file.write "# #{model.class_name}\n"
+      file.write "\n# #{model.class_name}\n"
       model.relationships.each do |relationship|
-        file.write "* #{relationship}"
+        file.write "* #{relationship}\n"
       end
     end
+    file.close
   end
 
   private
 
-  def make_relations_directoy
-    Dir.mkdir @relations_path
+  def make_relations_directory
+    Dir.mkdir @relations_path unless Dir.exists? @relations_path
   end
 end
