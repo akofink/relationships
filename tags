@@ -4,23 +4,92 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Application	lib/relationships.rb	/^  class Application$/;"	c	class:relationships
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+CommentsHelper	app/helpers/comments_helper.rb	/^module CommentsHelper$/;"	m
 FileParser	lib/relationships/file_parser.rb	/^class FileParser$/;"	c
+Image	app/models/image.rb	/^class Image < ActiveRecord::Base$/;"	c
+ImageUploader	app/uploaders/image_uploader.rb	/^class ImageUploader < CarrierWave::Uploader::Base$/;"	c
+ImagesController	app/controllers/images_controller.rb	/^class ImagesController < ApplicationController$/;"	c
+ImagesHelper	app/helpers/images_helper.rb	/^module ImagesHelper$/;"	m
 MarkdownGenerator	lib/relationships/markdown_generator.rb	/^class MarkdownGenerator$/;"	c
 Model	lib/relationships/model.rb	/^class Model$/;"	c
-relationships	lib/relationships.rb	/^module relationships$/;"	m
+PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
+PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
+Permission	app/models/permission.rb	/^class Permission$/;"	c
+Recipe	app/models/recipe.rb	/^class Recipe < ActiveRecord::Base$/;"	c
+RecipesController	app/controllers/recipes_controller.rb	/^class RecipesController < ApplicationController$/;"	c
+RecipesHelper	app/helpers/recipes_helper.rb	/^module RecipesHelper$/;"	m
+Relationships	lib/relationships.rb	/^class Relationships$/;"	c
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
 TestModel	spec/assets/test_model.rb	/^class TestModel < ActiveRecord::Base$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+admin?	app/models/user.rb	/^  def admin?$/;"	f	class:User
+allow?	app/models/permission.rb	/^  def allow?(controller, action, args = {})$/;"	f	class:Permission
+authorize	app/controllers/application_controller.rb	/^  def authorize(args = {})$/;"	f	class:ApplicationController
+chronological	app/models/comment.rb	/^  def self.chronological$/;"	F	class:Comment
 class_name	lib/relationships/model.rb	/^  def class_name$/;"	f	class:Model
+comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
+create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
+create	app/controllers/images_controller.rb	/^  def create$/;"	f	class:ImagesController
+create	app/controllers/recipes_controller.rb	/^  def create$/;"	f	class:RecipesController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+crop	app/uploaders/image_uploader.rb	/^  def crop width = 500, height = 500$/;"	f	class:ImageUploader
+current_permission	app/controllers/application_controller.rb	/^  def current_permission(args = {})$/;"	f	class:ApplicationController
+current_user	app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
+delete	app/controllers/images_controller.rb	/^  def delete$/;"	f	class:ImagesController
+delete	app/controllers/recipes_controller.rb	/^  def delete$/;"	f	class:RecipesController
+delete	app/controllers/users_controller.rb	/^  def delete$/;"	f	class:UsersController
+destroy	app/controllers/comments_controller.rb	/^  def destroy$/;"	f	class:CommentsController
+destroy	app/controllers/images_controller.rb	/^  def destroy$/;"	f	class:ImagesController
+destroy	app/controllers/recipes_controller.rb	/^  def destroy$/;"	f	class:RecipesController
+destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
+edit	app/controllers/comments_controller.rb	/^  def edit$/;"	f	class:CommentsController
+edit	app/controllers/recipes_controller.rb	/^  def edit$/;"	f	class:RecipesController
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+extension_white_list	app/uploaders/image_uploader.rb	/^  def extension_white_list$/;"	f	class:ImageUploader
 extract_relationships	lib/relationships/model.rb	/^  def extract_relationships$/;"	f	class:Model
 file	lib/relationships/markdown_generator.rb	/^  def file$/;"	f	class:MarkdownGenerator
 file_name	lib/relationships/model.rb	/^  def file_name$/;"	f	class:Model
 from_file	lib/relationships/model.rb	/^  def self.from_file(file)$/;"	F	class:Model
+index	app/controllers/recipes_controller.rb	/^  def index$/;"	f	class:RecipesController
+index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+initialize	app/models/permission.rb	/^  def initialize(args = {})$/;"	f	class:Permission
 initialize	lib/relationships/markdown_generator.rb	/^  def initialize(args = {})$/;"	f	class:MarkdownGenerator
 initialize	lib/relationships/model.rb	/^  def initialize(args = {})$/;"	f	class:Model
-make_relationships_directoy	lib/relationships/markdown_generator.rb	/^  def make_relationships_directoy$/;"	f	class:MarkdownGenerator
+login	app/models/user.rb	/^  def self.login(email, password)$/;"	F	class:User
+login_with_session	app/controllers/application_controller.rb	/^  def login_with_session(user)$/;"	f	class:ApplicationController
+logout	app/controllers/application_controller.rb	/^  def logout$/;"	f	class:ApplicationController
+make_relationships_directory	lib/relationships/markdown_generator.rb	/^  def make_relationships_directory$/;"	f	class:MarkdownGenerator
+md	app/helpers/application_helper.rb	/^  def md(text)$/;"	f	class:ApplicationHelper
+new	app/controllers/comments_controller.rb	/^  def new$/;"	f	class:CommentsController
+new	app/controllers/images_controller.rb	/^  def new$/;"	f	class:ImagesController
+new	app/controllers/recipes_controller.rb	/^  def new$/;"	f	class:RecipesController
+new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 output	lib/relationships/markdown_generator.rb	/^  def self.output(models)$/;"	F	class:MarkdownGenerator
 output!	lib/relationships/markdown_generator.rb	/^  def output!$/;"	f	class:MarkdownGenerator
 parse	lib/relationships/file_parser.rb	/^  def self.parse model_files$/;"	F	class:FileParser
+recipe_params	app/controllers/recipes_controller.rb	/^  def recipe_params$/;"	f	class:RecipesController
+redirect_back	app/controllers/application_controller.rb	/^  def redirect_back(default = :root)$/;"	f	class:ApplicationController
 relationships	lib/relationships/model.rb	/^  def relationships$/;"	f	class:Model
-run	lib/relationships.rb	/^    def self.run!$/;"	F	class:relationships.Application
+run	lib/relationships.rb	/^  def self.run!$/;"	F	class:Relationships
+set_recipe	app/controllers/recipes_controller.rb	/^  def set_recipe$/;"	f	class:RecipesController
+set_user	app/controllers/users_controller.rb	/^  def set_user$/;"	f	class:UsersController
+show	app/controllers/recipes_controller.rb	/^  def show$/;"	f	class:RecipesController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+store_dir	app/uploaders/image_uploader.rb	/^  def store_dir$/;"	f	class:ImageUploader
 team_has_user?	spec/assets/test_model.rb	/^  def team_has_user?(user)$/;"	f	class:TestModel
+update	app/controllers/comments_controller.rb	/^  def update$/;"	f	class:CommentsController
+update	app/controllers/recipes_controller.rb	/^  def update$/;"	f	class:RecipesController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+user	app/controllers/recipes_controller.rb	/^  def user$/;"	f	class:RecipesController
+user_params	app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
