@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Relations::MarkdownGenerator do
+describe MarkdownGenerator do
   let(:model) { double('Model') }
-  let(:markdown_generator) { Relations::MarkdownGenerator.new }
+  let(:markdown_generator) { MarkdownGenerator.new }
   let(:file) { double('File') }
 
   before(:each) do
@@ -14,8 +14,8 @@ describe Relations::MarkdownGenerator do
 
   describe '.output' do
     it 'outputs the models' do
-      Relations::MarkdownGenerator.any_instance.should_receive :output!
-      Relations::MarkdownGenerator.output [model]
+      MarkdownGenerator.any_instance.should_receive :output!
+      MarkdownGenerator.output [model]
     end
   end
 

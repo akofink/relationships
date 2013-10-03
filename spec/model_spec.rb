@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Relations::Model do
-  let(:model) { Relations::Model.from_file 'spec/assets/test_model.rb' }
+describe Model do
+  let(:model) { Model.from_file 'spec/assets/test_model.rb' }
   describe '.from_file' do
     it 'reads the file' do
       File.should_receive :read

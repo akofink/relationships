@@ -8,7 +8,6 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.before(:each) do
-    include Relations
     Rails.stub(:root).and_return Pathname.new('')
   end
 end

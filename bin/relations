@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-Relations::Application.run!
+require 'relations'
+
+Relations.run!
