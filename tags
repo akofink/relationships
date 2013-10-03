@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Application	lib/relations.rb	/^  class Application$/;"	c	class:Relations
+FileParser	lib/relations/file_parser.rb	/^class FileParser$/;"	c
+MarkdownGenerator	lib/relations/markdown_generator.rb	/^class MarkdownGenerator$/;"	c
+Model	lib/relations/model.rb	/^class Model$/;"	c
+Relations	lib/relations.rb	/^module Relations$/;"	m
+TestModel	spec/assets/test_model.rb	/^class TestModel < ActiveRecord::Base$/;"	c
+extract_relationships	lib/relations/model.rb	/^  def extract_relationships$/;"	f	class:Model
+from_file	lib/relations/model.rb	/^  def self.from_file(file)$/;"	F	class:Model
+initialize	lib/relations/model.rb	/^  def initialize(args = {})$/;"	f	class:Model
+output	lib/relations/markdown_generator.rb	/^  def self.output(models)$/;"	F	class:MarkdownGenerator
+parse	lib/relations/file_parser.rb	/^  def self.parse model_files$/;"	F	class:FileParser
+relationships	lib/relations/model.rb	/^  def relationships$/;"	f	class:Model
+run	lib/relations.rb	/^    def self.run!$/;"	F	class:Relations.Application
+team_has_user?	spec/assets/test_model.rb	/^  def team_has_user?(user)$/;"	f	class:TestModel
