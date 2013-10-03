@@ -10,10 +10,16 @@ MarkdownGenerator	lib/relations/markdown_generator.rb	/^class MarkdownGenerator$
 Model	lib/relations/model.rb	/^class Model$/;"	c
 Relations	lib/relations.rb	/^module Relations$/;"	m
 TestModel	spec/assets/test_model.rb	/^class TestModel < ActiveRecord::Base$/;"	c
+class_name	lib/relations/model.rb	/^  def class_name$/;"	f	class:Model
 extract_relationships	lib/relations/model.rb	/^  def extract_relationships$/;"	f	class:Model
+file	lib/relations/markdown_generator.rb	/^  def file$/;"	f	class:MarkdownGenerator
+file_name	lib/relations/model.rb	/^  def file_name$/;"	f	class:Model
 from_file	lib/relations/model.rb	/^  def self.from_file(file)$/;"	F	class:Model
+initialize	lib/relations/markdown_generator.rb	/^  def initialize(args = {})$/;"	f	class:MarkdownGenerator
 initialize	lib/relations/model.rb	/^  def initialize(args = {})$/;"	f	class:Model
+make_relations_directoy	lib/relations/markdown_generator.rb	/^  def make_relations_directoy$/;"	f	class:MarkdownGenerator
 output	lib/relations/markdown_generator.rb	/^  def self.output(models)$/;"	F	class:MarkdownGenerator
+output!	lib/relations/markdown_generator.rb	/^  def output!$/;"	f	class:MarkdownGenerator
 parse	lib/relations/file_parser.rb	/^  def self.parse model_files$/;"	F	class:FileParser
 relationships	lib/relations/model.rb	/^  def relationships$/;"	f	class:Model
 run	lib/relations.rb	/^    def self.run!$/;"	F	class:Relations.Application
