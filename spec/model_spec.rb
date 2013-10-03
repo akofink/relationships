@@ -15,4 +15,18 @@ describe Model do
       model.relationships.count.should == 2
     end
   end
+
+  describe '#file_name' do
+    it 'extracts the name' do
+      File.stub :read
+      model.file_name.should == 'test_model.rb'
+    end
+  end
+
+  describe '#name' do
+    it 'extracts the model name' do
+      File.stub :read
+      model.class_name.should == 'TestModel'
+    end
+  end
 end

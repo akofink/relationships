@@ -6,4 +6,8 @@ RSpec.configure do |config|
   config.filter_run :focus
 
   config.order = 'random'
+
+  config.before(:each) do
+    Rails.stub(:root).and_return Pathname.new('')
+  end
 end

@@ -1,16 +1,25 @@
 class Model
-  attr_accessor :file_contents
+  attr_accessor :file_contents, :file_path
+
+  def self.from_file(file)
+    Model.new file: file
+  end
 
   def initialize(args = {})
-    @file_contents = File.read args[:file] if args[:file]
+    @file_path = args[:file]
+    @file_contents = File.read file_path if file_path
   end
 
   def relationships
     @relationships ||= extract_relationships
   end
 
-  def self.from_file(file)
-    Model.new file: file
+  def file_name
+    file_path[/\w+\.rb/]
+  end
+
+  def class_name
+    file_name[/\w+/].camelize
   end
 
   private
