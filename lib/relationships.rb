@@ -1,8 +1,8 @@
 require 'rails'
 
-Dir['./lib/relations/*'].map {|m| require m}
+Dir['./lib/relationships/*'].map {|m| require m}
 
-class Relations
+class Relationships
   def self.run!
     model_files = Dir[Pathname.new('app/models/*')]
     models = FileParser.parse model_files

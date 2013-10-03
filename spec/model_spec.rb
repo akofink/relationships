@@ -11,7 +11,7 @@ describe Model do
   end
 
   describe '#relationships' do
-    it 'extracts relationship strings' do
+    it 'extracts relationshipship strings' do
       model.relationships.count.should == 2
     end
   end

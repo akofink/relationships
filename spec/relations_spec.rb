@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe Relations do
+describe Relationships do
   describe '.run!' do
     it 'uses the FileParser to parse each model file' do
       FileParser.should_receive :parse
       MarkdownGenerator.should_receive :output
-      Relations.run!
+      Relationships.run!
     end
   end
 end
