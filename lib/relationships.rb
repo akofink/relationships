@@ -1,6 +1,6 @@
 require 'rails'
 
-Dir['./lib/relationships/*'].map {|m| require m}
+Gem.find_files('relationships/*').each {|m| require m}
 
 class Relationships
   def self.run!
